@@ -116,25 +116,7 @@ function splitPos = findSplitPosInD(d, params)
         if (splitPos == 1), splitPos = 2; end
         if (splitPos == N), splitPos = N-1; end
     end
-    
-    % Simple implementation
-%     d = abs(d);
-%     mask = d > params.LINE_POINT_DIST_THRESHOLD;    
-%     if isempty(find(mask, 1)) 
-%         splitPos = -1;
-%         return;
-%     end
-%      
-%     [~, splitPos] = max(d);
-%     if (splitPos == 1), splitPos = 2; end
-%     if (splitPos == N), splitPos = N-1; end
-%ENDRM
 
-%STARTUNCOMMENT
-%     splitPos = TODO
-%ENDUNCOMMENT
-end
-%---------------------------------------------------------------------
 
 function [alphaOut, rOut, pointIdxOut] = mergeColinearNeigbors (XY, alpha, r, pointIdx, params)
     z = [alpha(1), r(1)];
